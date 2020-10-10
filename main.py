@@ -1,5 +1,6 @@
 from tkinter import *
-   
+import time
+
 root = Tk()
 
 def clock():
