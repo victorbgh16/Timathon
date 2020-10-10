@@ -16,5 +16,7 @@ def addButtonpressed():
 
 addButton = Button (root, text = 'Add', command = addButtonpressed).pack()
 
+def retrieve_input():
+	input = self.subjectInput.get('1.0', END)
 
 root.mainloop()
