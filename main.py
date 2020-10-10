@@ -9,4 +9,4 @@ header = Label(root, text = "The best School Planer")
 header.grid() 
 
 root.mainloop()
-hi
+
