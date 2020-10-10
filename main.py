@@ -9,5 +9,10 @@ header = Label(root, text="The best School Planer").pack()
 
 info = Label(root, text="Add or Remove a Lesson").pack()
 
+def callback():
+	print('Test')
+
+w = Button (root, command=, ...)
+
 root.mainloop()
 
