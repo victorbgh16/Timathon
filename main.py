@@ -11,10 +11,10 @@ info = Label(root, text="Add or Remove a Lesson").pack()
 
 subjectInput = Text(root, height=1, width=30).pack()
 
-def callback():
+def addButtonpressed():
 	print('Test')
 
-addButton = Button (root, text = 'Add', command = callback).pack()
+addButton = Button (root, text = 'Add', command = addButtonpressed).pack()
 
 
 root.mainloop()
