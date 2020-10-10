@@ -15,16 +15,20 @@ clock()
 root.title("School Planer") 
 root.geometry('1280x720') 
 
-header = Label(root, text="The best School Planer").pack()
+header = Label(root, text="The best School Planer")
+header.pack()
 
-info = Label(root, text="Add or Remove a Lesson").pack()
+info = Label(root, text="Add or Remove a Lesson")
+info.pack()
 
 def addButtonpressed():
-	result=textExample.get("1.0","end")
+	result=subjectInput.get("1.0","end")
 	print(result)
 
-subjectInput = Text(root, height=1, width=10, text="Read", command=addButtonpressed)
+subjectInput = Text(root, height=1)
+subjectInput.pack()
 
-addButton = Button (root, text = 'Add', command = addButtonpressed).pack()
+addButton = Button (root, text = 'Add', command = addButtonpressed)
+addButton.pack()
 
 root.mainloop()
