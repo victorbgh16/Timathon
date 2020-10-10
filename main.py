@@ -2,6 +2,15 @@ from tkinter import *
    
 root = Tk()
 
+def clock():
+    t=time.strftime('%I:%M:%S',time.localtime())
+    if t!='':
+        label1.config(text=t,font='times 25')
+    root.after(100,clock)
+label1=Label(root,justify='center')
+label1.pack()
+clock()
+
 time_string = time.strftime('%H:%M:%S')
 myvar = Tkinter.Label(root,image = tkimage, text = time_string, compound = Tkinter.CENTER)
 
