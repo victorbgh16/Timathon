@@ -1,6 +1,9 @@
 from tkinter import *
    
-root = Tk() 
+root = Tk()
+
+time_string = time.strftime('%H:%M:%S')
+myvar = Tkinter.Label(root,image = tkimage, text = time_string, compound = Tkinter.CENTER)
 
 root.title("School Planer") 
 root.geometry('1280x720') 
