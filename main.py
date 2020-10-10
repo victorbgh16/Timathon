@@ -20,3 +20,5 @@ def retrieve_input():
 	input = self.subjectInput.get('1.0', END)
 
 root.mainloop()
+
+# https://stackoverflow.com/questions/14824163/how-to-get-the-input-from-the-tkinter-text-widget
