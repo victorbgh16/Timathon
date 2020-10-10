@@ -12,6 +12,6 @@ info = Label(root, text="Add or Remove a Lesson").pack()
 def callback():
 	print('Test')
 
-w = Button (root, command=callback, ...)
+b = Button (root, text = 'Test', command = callback).pack()
 
 root.mainloop()
