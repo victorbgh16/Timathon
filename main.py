@@ -9,11 +9,12 @@ header = Label(root, text="The best School Planer").pack()
 
 info = Label(root, text="Add or Remove a Lesson").pack()
 
-def callback():
-	subject = input('What subject do you want to add?\n')
-	
-	
+subjectInput = Text(root, height=1, width=30).pack()
 
-b = Button (root, text = 'Add a subject', command = callback).pack(side = BOTTOM)
+def callback():
+	print('Test')
+
+addButton = Button (root, text = 'Add', command = callback).pack()
+
 
 root.mainloop()
