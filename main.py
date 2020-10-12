@@ -1,5 +1,6 @@
 from tkinter import *
 import time
+from tkinter.ttk import Notebook
    
 root = Tk()
 
@@ -59,6 +60,26 @@ def EnglishButtonPressed():
 
 EnglishButton = Button(root, text = 'add english', command = EnglishButtonPressed)
 EnglishButton.pack()
+
+frame = Frame(root)
+frame.pack(fill = 'both')
+
+tablayout = Notebook(frame)
+
+tab = Frame(tablayout)
+tab.pack(fill = 'both')
+
+label = Label(tab, text = 'this is just a test')
+label.pack()
+tablayout.add(tab, text = 'TAB 1')
+
+tab2 = Frame(tablayout)
+tab2.pack(fill = 'both')
+label2 = Label(tab2, text = 'this is the second test')
+label2.pack()
+tablayout.add(tab2, text = 'TAB 2')
+
+tablayout.pack(fill = 'both')
 
 root.mainloop()
 
