@@ -75,31 +75,71 @@ EnglishButton.pack()
 
 def BreakButtonPressed():
     print('break')
-    break_label = Label(root, text='Break')
+    break_label = Label(root, text = 'Break')
     break_label.pack()
 
 
-BreakButton = Button(root, text='add a Break', command=BreakButtonPressed)
+BreakButton = Button(root, text = 'add a Break', command = BreakButtonPressed)
 BreakButton.pack()
 
 frame = Frame(root)
-frame.pack(fill='both')
+frame.pack(fill = 'both')
 
 tablayout = Notebook(frame)
 
 tab = Frame(tablayout)
-tab.pack(fill='both')
+tab.pack(fill = 'both')
 
-label = Label(tab, text='this is just a test')
+
+label = Label(tab, text = 'this is just a test')
 label.pack()
-tablayout.add(tab, text='TAB 1')
+tablayout.add(tab, text = 'TAB 1')
 
 tab2 = Frame(tablayout)
-tab2.pack(fill='both')
+tab2.pack(fill = 'both')
+
 label2 = Label(tab2, text='this is the second test')
 label2.pack()
-tablayout.add(tab2, text='TAB 2')
 
+
+tablayout.add(tab2, text='TAB 2')
 tablayout.pack(fill='both')
+
+# Python program to create a table 
+
+from tkinter import *
+
+
+class Table: 
+    
+    def __init__(self,root): 
+        
+        # code for creating table 
+        for i in range(total_rows): 
+            for j in range(total_columns): 
+                
+                self.e = Entry(root, width=20, fg='blue', 
+                            font=('Arial',16,'bold')) 
+                
+                self.e.grid(row=i, column=j) 
+                self.e.insert(END, lst[i][j]) 
+
+# take the data 
+lst = [(1,'Raj','Mumbai',19), 
+    (2,'Aaryan','Pune',18), 
+    (3,'Vaishnavi','Mumbai',20), 
+    (4,'Rachna','Mumbai',21), 
+    (5,'Shubham','Delhi',21)] 
+
+# find total number of rows and 
+# columns in list 
+total_rows = len(lst) 
+total_columns = len(lst[0]) 
+
+# create root window 
+root = Tk() 
+t = Table(root) 
+root.mainloop() 
+
 
 root.mainloop()
